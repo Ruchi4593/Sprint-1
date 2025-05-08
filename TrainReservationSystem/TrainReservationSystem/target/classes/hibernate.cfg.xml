@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/trainreservation</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">ruchi</property>
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Schema management and SQL display -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Entity mapping -->
+        <mapping class="entity.Train"/>
+        
+        <mapping class="entity.Payment"/>
+        
+        <mapping class="entity.Admin"/>
+        
+        <mapping class="entity.Passenger"/>
+        
+        <mapping class="entity.Ticket"/>
+        
+
+    </session-factory>
+</hibernate-configuration>
+
